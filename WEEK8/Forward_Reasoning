@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main()
+{
+    int american, enemy, has_missiles;
+    int sold_by_robert, missile_is_weapon;
+    int hostile, criminal;
+
+    printf("Is Robert an American citizen? (1/0): ");
+    scanf("%d", &american);
+
+    printf("Is Country A an enemy of America? (1/0): ");
+    scanf("%d", &enemy);
+
+    printf("Does Country A have missiles? (1/0): ");
+    scanf("%d", &has_missiles);
+
+    printf("Were the missiles sold by Robert? (1/0): ");
+    scanf("%d", &sold_by_robert);
+
+    printf("Are missiles considered weapons? (1/0): ");
+    scanf("%d", &missile_is_weapon);
+
+    hostile = enemy;
+
+    if (american && hostile && has_missiles &&
+        sold_by_robert && missile_is_weapon)
+    {
+        criminal = 1;
+    }
+    else
+    {
+        criminal = 0;
+    }
+
+    if (criminal)
+        printf("Robert is a criminal.\n");
+    else
+        printf("Robert is not proved to be a criminal.\n");
+
+    return 0;
+}
